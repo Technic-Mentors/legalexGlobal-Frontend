@@ -768,7 +768,7 @@ export default function Home() {
           className={`row g-5 animate__animated ${isVisibleRight1 ? "animate__fadeInUp" : ""
             }  animate-on-scroll`}
         >
-          <div className="col-lg-4">
+          <div className="col-md-4">
             <div className="team-item position-relative overflow-hidden">
               <img className="img-fluid w-100" src={FarhanImg} loading="lazy" alt="" />
               <div
@@ -780,7 +780,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="col-lg-4">
+          <div className="col-md-4">
             <div className="team-item position-relative overflow-hidden">
               <img className="img-fluid w-100" src={BilalImg} loading="lazy" alt="" />
               <div
@@ -792,9 +792,9 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="col-lg-4">
+          <div className="col-md-4">
             <div className="team-item position-relative overflow-hidden">
-              <img className="img-fluid w-100" src={WaseemImg} loading="lazy" alt="" />
+              <img className="img-fluid" src={WaseemImg} loading="lazy" alt="" />
               <div
                 className="team-text w-100 position-absolute top-50 text-center p-4"
                 style={{ backgroundColor: "#6E8644" }}

@@ -24,7 +24,7 @@ export default function Login() {
         both.innerText = json.error;
         if (json.success) {
           localStorage.setItem("token", json.authtoken);
-          navigate("/admin");
+          navigate("/adminPanel");
         }
       };
       const onchange = (e) => {

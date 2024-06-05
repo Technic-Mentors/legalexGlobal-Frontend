@@ -151,7 +151,7 @@ export default function Addcategory() {
           >
             Change Password
           </button>
-        <Link to="/"><button className="btn btn-primary">Log Out</button></Link>
+        <Link to="/signin"><button className="btn btn-primary">Log Out</button></Link>
         </div>
         <h2 className="pt-5 pb-3 text-center">Create Category</h2>
       <form ref={refForm} className='form-group' onSubmit={AddCategory}>

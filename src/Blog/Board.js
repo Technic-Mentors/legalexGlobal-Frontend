@@ -117,7 +117,7 @@ const pasError = document.getElementById("confirmpas");
           >
             Change Password
           </button>
-        <Link to="/">
+        <Link to="/signin">
           <button className="btn btn-primary">Log Out</button>
         </Link>
       </div>

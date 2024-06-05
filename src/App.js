@@ -39,7 +39,7 @@ function App() {
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:postSlug" element={<Blogcat />} />
             <Route path="/signin" element={<Login />} />
-            <Route path='/admin' element={<Admin />}>
+            <Route path='/adminPanel' element={<Admin />}>
               <Route index element={<Navigate to="addblog" />} />
               <Route path="addblog" element={<Blogcategory />} />
               <Route path="allposts" element={<Allposts />} />

@@ -202,7 +202,7 @@ export default function Blogcategory() {
           >
             Change Password
           </button>
-          <Link to="/">
+          <Link to="/signin">
             <button className="btn btn-primary">Log Out</button>
           </Link>
         </div>

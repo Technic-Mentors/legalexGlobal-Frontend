@@ -163,7 +163,7 @@ export default function Allcategory() {
           >
             Change Password
           </button>
-        <Link to="/"><button className="btn btn-primary">Log Out</button></Link>
+        <Link to="/signin"><button className="btn btn-primary">Log Out</button></Link>
         </div>
         <h2 className="pt-5 text-center pb-2">Categories List</h2>
       <table className="table table-bordered">
