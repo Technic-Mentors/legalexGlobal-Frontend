@@ -18,7 +18,6 @@ export default function Admindata() {
           <div className="d-flex justify-content-start">
             <div>
               <span className="text-uppercase " style={{ fontSize: "15px", fontWeight: "bolder" }}>Add Blog</span>
-
             </div>
           </div>
         </button>
