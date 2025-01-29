@@ -7,6 +7,9 @@ export default function Navbar() {
     { path: "/", text: "HOME" },
     { path: "/about", text: "ABOUT US" },
     { path: "/service", text: "OUR SERVICES" },
+    // { path: "/oppurtunity-for-you", text: "Opportunity For You" },
+    // { path: "/walk-way", text: "Walkway" },
+    { path: "/events", text: "Events" },
     { path: "/blog", text: "Blog" },
     { path: "/contact", text: "CONTACT US" },
   ];

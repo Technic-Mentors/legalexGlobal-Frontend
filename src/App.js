@@ -20,6 +20,9 @@ import Login from './Blog/Login';
 import Blog from './Blog/Blog';
 import Blogcat from './Blog/Blogcat';
 import MyProvider from "./ContextApi/MyProvider";
+import OppForU from "./Pages/OppForU";
+import Walkway from "./Pages/Walkway";
+import EventGallery from "./Pages/Events";
 
 function App() {
   return (
@@ -37,6 +40,9 @@ function App() {
             <Route path="/service" element={<Service />}></Route>
             <Route path="/contact" element={<Contact />}></Route>
             <Route path="/blog" element={<Blog />} />
+            <Route path="/oppurtunity-for-you" element={<OppForU />} />
+            <Route path="/walk-way" element={<Walkway />} />
+            <Route path="/events" element={<EventGallery />} />
             <Route path="/blog/:postSlug" element={<Blogcat />} />
             <Route path="/signin" element={<Login />} />
             <Route path='/adminPanel' element={<Admin />}>

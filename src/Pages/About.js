@@ -3,6 +3,17 @@ import { useInView } from "react-intersection-observer";
 import BilalImg from "./img/Bilal-Warraich.avif"
 import WaseemImg from "./img/Waseem-Munir.avif"
 import FarhanImg from "./img/Farhan-Babar.avif"
+import col1 from "./img/next/col1.jpg"
+import col2 from "./img/next/col2.jpg"
+import col3 from "./img/next/col3.jpg"
+import col4 from "./img/next/col4.jpg"
+import col5 from "./img/next/col5.jpg"
+import col6 from "./img/next/col6.jpg"
+import col7 from "./img/next/col7.jpg"
+import col8 from "./img/next/col8.jpg"
+import col9 from "./img/next/col9.png"
+import col10 from "./img/next/col10.jpg"
+import Team from "./Team";
 
 export default function About() {
   const [isVisibleLeft, setIsVisibleLeft] = React.useState(false);
@@ -96,6 +107,19 @@ export default function About() {
   const MoveToTop = () => {
     window.scrollTo(0, 0);
   };
+
+  const images = [
+    { src: col1, alt: "Image 1" },
+    { src: col2, alt: "Image 2" },
+    { src: col3, alt: "Image 3" },
+    { src: col4, alt: "Image 4" },
+    { src: col5, alt: "Image 5" },
+    { src: col6, alt: "Image 6" },
+    { src: col7, alt: "Image 7" },
+    { src: col8, alt: "Image 8" },
+    { src: col9, alt: "Image 9" },
+    { src: col10, alt: "Image 10" }
+  ];
   return (
     <div>
       <div className="home-container">
@@ -124,16 +148,15 @@ export default function About() {
         <div className="row g-0">
           <div
             ref={refLeft}
-            className={`col-lg-6 py-6 px-5 animate__animated ${
-              isVisibleLeft ? "animate__fadeInUp" : ""
-            }  animate-on-scroll`}
+            className={`col-lg-6 py-6 px-5 animate__animated ${isVisibleLeft ? "animate__fadeInUp" : ""
+              }  animate-on-scroll`}
           >
             <h1 className="display-5 mb-4">
-              Welcome To <span style={{ color: "#6E8644" }}>CONSULT</span>
+              Welcome To <span style={{ color: "#6E8644" }}>LGC</span>
             </h1>
-            <h4 className="mb-4" style={{ color: "#6E8644" }}>
-              Need Any Help Schedule a Consultation
-            </h4>
+            <button className="mb-4 btn btn-outline-success">
+              Book An Appointment
+            </button>
             <p className="mb-4">
               Elevate your path to success by taking the crucial first step –
               schedule a consultation now. Our seasoned experts are dedicated to
@@ -145,9 +168,8 @@ export default function About() {
           </div>
           <div
             ref={refUp}
-            className={`col-lg-6 animate__animated ${
-              isVisibleUp ? "animate__fadeInUp" : ""
-            }  animate-on-scroll`}
+            className={`col-lg-6 animate__animated ${isVisibleUp ? "animate__fadeInUp" : ""
+              }  animate-on-scroll`}
           >
             <div
               className="h-100 d-flex flex-column justify-content-center p-5"
@@ -213,9 +235,8 @@ export default function About() {
           <div
             style={{ borderRadius: 5 }}
             ref={refUp3}
-            className={`col-sm-6 mt-3 animate__animated ${
-              isVisibleUp3 ? "animate__fadeInUp" : ""
-            } animate-on-scroll`}
+            className={`col-sm-6 mt-3 animate__animated ${isVisibleUp3 ? "animate__fadeInUp" : ""
+              } animate-on-scroll`}
           >
             <div className="card">
               <div className="card-body">
@@ -235,9 +256,8 @@ export default function About() {
           </div>
           <div
             ref={refUp3}
-            className={`col-sm-6 mt-3 animate__animated ${
-              isVisibleUp3 ? "animate__fadeInUp" : ""
-            }  animate-on-scroll`}
+            className={`col-sm-6 mt-3 animate__animated ${isVisibleUp3 ? "animate__fadeInUp" : ""
+              }  animate-on-scroll`}
           >
             <div className="card">
               <div className="card-body">
@@ -270,9 +290,8 @@ export default function About() {
         </div>
         <div
           ref={refUp4}
-          className={`row d-flex justify-content-between g-5 px-4 animate__animated ${
-            isVisibleUp4 ? "animate__fadeInUp" : ""
-          }  animate-on-scroll`}
+          className={`row d-flex justify-content-between g-5 px-4 animate__animated ${isVisibleUp4 ? "animate__fadeInUp" : ""
+            }  animate-on-scroll`}
         >
           <div className="col-md-4 col-content coreC">
             <div
@@ -325,6 +344,38 @@ export default function About() {
         </div>
       </div>
       {/*  */}
+      {/* could be next */}
+      <div className="container mt-5">
+        <div
+          className="text-center mx-auto mb-5 mt-5"
+          style={{ maxWidth: "600px" }}
+        >
+          <h1 className="display-5 mb-0">You Could be Next!</h1>
+          <hr className="w-25 mx-auto bg-success" />
+        </div>
+        <div className="row g-3">
+          {images?.map((data, index) => (
+            <div className="col-md-3" key={index}>
+              <img src={data.src} alt={data.alt} className="img-fluid" style={{
+                borderRadius: "15px",
+                boxShadow: "0 4px 15px rgba(0, 0, 0, 0.2)",
+                transition: "transform 0.3s, box-shadow 0.3s",
+                cursor: "pointer",
+              }}
+                onMouseEnter={(e) =>
+                (e.currentTarget.style.transform =
+                  "scale(1.05)")
+                }
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = "scale(1)";
+                  e.currentTarget.style.boxShadow =
+                    "0 4px 15px rgba(0, 0, 0, 0.2)";
+                }}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
       {/* CEO Message */}
       <div>
         <div
@@ -339,9 +390,8 @@ export default function About() {
             <div className="row">
               <div
                 ref={refRight}
-                className={`col mt-3 mb-2 animate__animated ${
-                  isVisibleRight ? "animate__fadeInUp" : ""
-                }  animate-on-scroll`}
+                className={`col mt-3 mb-2 animate__animated ${isVisibleRight ? "animate__fadeInUp" : ""
+                  }  animate-on-scroll`}
                 style={{ backgroundColor: "white", borderRadius: 10 }}
               >
                 <p className="mt-4 mb-4">
@@ -360,9 +410,8 @@ export default function About() {
             <div className="row">
               <div
                 ref={refUp2}
-                className={`col mt-2 mb-2 animate__animated ${
-                  isVisibleUp2 ? "animate__fadeInUp" : ""
-                }  animate-on-scroll`}
+                className={`col mt-2 mb-2 animate__animated ${isVisibleUp2 ? "animate__fadeInUp" : ""
+                  }  animate-on-scroll`}
                 style={{ backgroundColor: "white", borderRadius: 10 }}
               >
                 <p className="mt-4 mb-4">
@@ -380,9 +429,8 @@ export default function About() {
             <div className="row">
               <div
                 ref={refRight1}
-                className={`col mt-2 mb-3 animate__animated ${
-                  isVisibleRight1 ? "animate__fadeInUp" : ""
-                }  animate-on-scroll`}
+                className={`col mt-2 mb-3 animate__animated ${isVisibleRight1 ? "animate__fadeInUp" : ""
+                  }  animate-on-scroll`}
                 style={{ backgroundColor: "white", borderRadius: 10 }}
               >
                 <p className="mt-4 mb-4">
@@ -404,57 +452,7 @@ export default function About() {
       {/*  */}
 
       {/* <!-- Team Start --> */}
-      <div className="container-fluid py-6 px-5">
-        <div className="text-center mx-auto mb-5" style={{ maxWidth: "600px" }}>
-          <h1 className="display-5 mb-0">
-            Our <span style={{ color: "#6E8644" }}>Team</span> Members
-          </h1>
-          <hr className="w-25 mx-auto bg-success" />
-        </div>
-        <div
-          ref={refRight1}
-          className={`row g-5 animate__animated ${
-            isVisibleRight1 ? "animate__fadeInUp" : ""
-          }  animate-on-scroll`}
-        >
-          <div className="col-lg-4">
-            <div className="team-item position-relative overflow-hidden">
-              <img className="img-fluid w-100" src={FarhanImg} loading="lazy" alt="" />
-              <div
-                className="team-text w-100 position-absolute top-50 text-center p-4"
-                style={{ backgroundColor: "#6E8644" }}
-              >
-                <h3 className="text-white">Farhan Babar Warraich</h3>
-                <p className="text-white mb-0">Managing Director</p>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-4">
-            <div className="team-item position-relative overflow-hidden">
-              <img className="img-fluid w-100" src={BilalImg} loading="lazy" alt="" />
-              <div
-                className="team-text w-100 position-absolute top-50 text-center p-4"
-                style={{ backgroundColor: "#6E8644" }}
-              >
-                <h3 className="text-white">Bilal Warraich</h3>
-                <p className="text-white text-uppercase mb-0">CEO</p>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-4">
-            <div className="team-item position-relative overflow-hidden">
-              <img className="img-fluid w-100" src={WaseemImg} loading="lazy" alt="" />
-              <div
-                className="team-text w-100 position-absolute top-50 text-center p-4"
-                style={{ backgroundColor: "#6E8644" }}
-              >
-                <h3 className="text-white">Waseem Munir</h3>
-                <p className="text-white mb-0">Manager</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Team />
       {/* <!-- Team End --> */}
 
       {/* Perks start*/}
@@ -470,9 +468,8 @@ export default function About() {
       >
         <div
           ref={refRight2}
-          className={`row g-5 animate__animated ${
-            isVisibleRight2 ? "animate__fadeInUp" : ""
-          }  animate-on-scroll`}
+          className={`row g-5 animate__animated ${isVisibleRight2 ? "animate__fadeInUp" : ""
+            }  animate-on-scroll`}
         >
           <div className="col-lg-4 text-white perksB">
             <h2 className="text-white">
@@ -515,9 +512,9 @@ export default function About() {
 
       {/* <!-- Back to Top --> */}
       <div
-        onClick={MoveToTop}
-        className="btn btn-lg btn-lg-square rounded-circle back-to-top"
+        className="btn d-flex justify-content-center btn-lg btn-lg-square rounded-circle back-to-top"
         style={{ backgroundColor: "#6E8644" }}
+        onClick={MoveToTop}
       >
         <i className="bi bi-arrow-up text-white"></i>
       </div>

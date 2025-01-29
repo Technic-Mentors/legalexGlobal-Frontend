@@ -21,14 +21,14 @@ export default function Contact() {
     if (inViewRight) {
       setIsVisibleRight(true);
     }
-  }, [inViewLeft,inViewRight]);
+  }, [inViewLeft, inViewRight]);
 
   const submit = (e) => {
     e.preventDefault();
   };
   const MoveToTop = () => {
     window.scrollTo(0, 0);
-  }; 
+  };
   return (
     <div>
       <div className="home-container">
@@ -42,12 +42,12 @@ export default function Contact() {
             <div>
               <h1
                 className="text-white text-center animate__animated animate__zoomIn"
-                style={{fontSize: 70 }}
+                style={{ fontSize: 70 }}
               >
                 Contact Us
               </h1>
               <div className="d-flex justify-content-center">
-              <a href=" https://wa.me/923331119210" target="blank"><button className="btn btn-outline-success text-white px-2 py-2" style={{fontSize:20}}>Contact On Whatsaap</button></a>
+                <a href=" https://wa.me/923331119210" target="blank"><button className="btn btn-outline-success text-white px-2 py-2" style={{ fontSize: 20 }}>Contact On Whatsaap</button></a>
               </div>
             </div>
           </div>
@@ -59,9 +59,8 @@ export default function Contact() {
       <div className="container-fluid bg-secondary px-0">
         <div className="row g-0">
           <div ref={refLeft}
-          className={`col-lg-6 py-6 px-5 animate__animated ${
-            isVisibleLeft ? "animate__fadeInUp" : ""
-          } animate-on-scroll`}>
+            className={`col-lg-6 py-6 px-5 animate__animated ${isVisibleLeft ? "animate__fadeInUp" : ""
+              } animate-on-scroll`}>
             <h1 className="display-5 mb-4">
               Contact Us For Further Information
             </h1>
@@ -129,10 +128,9 @@ export default function Contact() {
           </div>
           {/*  */}
           <div style={{ minHeight: "400px" }} ref={refRight}
-          className={`col-lg-6 animate__animated ${
-            isVisibleRight ? "animate__fadeInUp" : ""
-          } animate-on-scroll`}>
-            <div className="h-100 d-flex flex-column justify-content-center p-5" style={{backgroundColor:'#6E8644'}}>
+            className={`col-lg-6 animate__animated ${isVisibleRight ? "animate__fadeInUp" : ""
+              } animate-on-scroll`}>
+            <div className="h-100 d-flex flex-column justify-content-center p-5" style={{ backgroundColor: '#6E8644' }}>
               <h1 className="mb-5" >Contact Information</h1>
               <div className="d-flex text-white mb-3">
                 <div
@@ -203,13 +201,13 @@ export default function Contact() {
       </div>
       {/* <!-- Contact End --> */}
       <div>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3361.7572807633437!2d74.0628852748182!3d32.585996593725085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391f1ad2710c7775%3A0xb0db743bfafe9179!2sRehman%20Shaheed%20Rd%2C%20Gujurat%2C%20Gujrat%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1693459260481!5m2!1sen!2s" width="100%" height="450" style={{border:0}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="working"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3361.7572807633437!2d74.0628852748182!3d32.585996593725085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391f1ad2710c7775%3A0xb0db743bfafe9179!2sRehman%20Shaheed%20Rd%2C%20Gujurat%2C%20Gujrat%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1693459260481!5m2!1sen!2s" width="100%" height="450" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="working"></iframe>
       </div>
       {/* <!-- Back to Top --> */}
       <div
+        className="btn d-flex justify-content-center btn-lg btn-lg-square rounded-circle back-to-top"
+        style={{ backgroundColor: "#6E8644" }}
         onClick={MoveToTop}
-        className="btn btn-lg btn-lg-square rounded-circle back-to-top"
-        style={{backgroundColor:'#6E8644'}}
       >
         <i className="bi bi-arrow-up text-white"></i>
       </div>

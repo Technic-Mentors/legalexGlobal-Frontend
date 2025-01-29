@@ -6,11 +6,11 @@ import { useInView } from "react-intersection-observer";
 import bg3 from "./img/4.jpg";
 import img3 from "./img/3.jpg.png";
 import img2 from "./img/2.jpg.png";
-import BilalImg from "./img/Bilal-Warraich.avif"
-import WaseemImg from "./img/Waseem-Munir.avif"
-import FarhanImg from "./img/Farhan-Babar.avif"
 import crouselImg from "./img/carousel-4.jpg"
 import crouselImg1 from "./img/carousel-10.jpg"
+import AdPopUp from "./AdPopUp";
+import Team from "./Team";
+import ScrollUni from "./ScrollUni";
 
 export default function Home() {
   const [centerSlidePercentage, setCenterSlidePercentage] = useState(33.33);
@@ -169,7 +169,7 @@ export default function Home() {
           data-bs-ride="carousel"
         >
           <div className="carousel-inner">
-            <div className="carousel-item active" style={{ backgroundImage: `url(${crouselImg})`,backgroundSize:"cover",backgroundRepeat:"no-repeat" }}>
+            <div className="carousel-item active" style={{ backgroundImage: `url(${crouselImg})`, backgroundSize: "cover", backgroundRepeat: "no-repeat" }}>
               <div style={{ backgroundColor: "rgba(21, 36, 64, .7)" }} className="crousel-Overlay">
                 <div className="d-flex align-items-center justify-content-center">
                   <div
@@ -201,7 +201,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="carousel-item" style={{ backgroundImage: `url(${crouselImg1})`,backgroundSize:"cover",backgroundRepeat:"no-repeat" }}>
+            <div className="carousel-item" style={{ backgroundImage: `url(${crouselImg1})`, backgroundSize: "cover", backgroundRepeat: "no-repeat" }}>
               <div style={{ backgroundColor: "rgba(21, 36, 64, .7)" }} className="crousel-Overlay">
                 <div className="d-flex flex-column align-items-center justify-content-center">
                   <div
@@ -271,11 +271,11 @@ export default function Home() {
               }  animate-on-scroll`}
           >
             <h1 className="display-5 mb-4">
-              Welcome To <span style={{ color: "#6E8644" }}>CONSULT</span>
+              Welcome To <span style={{ color: "#6E8644" }}>LGC</span>
             </h1>
-            <h4 className="mb-4" style={{ color: "#6E8644" }}>
-              Need Any Help Schedule a Consultation
-            </h4>
+            <button className="mb-4 btn btn-outline-success">
+              Book An Appointment
+            </button>
             <p className="mb-4">
               Elevate your path to success by taking the crucial first step –
               schedule a consultation now. Our seasoned experts are dedicated to
@@ -611,6 +611,8 @@ export default function Home() {
       </div>
       {/* <!-- Features End --> */}
 
+      <ScrollUni />
+
       {/* <!-- Quote1 Start --> */}
       <div>
         <h1 className="display-5 mb-5 text-center">
@@ -641,39 +643,39 @@ export default function Home() {
               <div className="col-md-4 col-4">
                 <Link to="/university"> <div className="d-flex align-items-center">
                   <i className="fa-solid fa-flag"></i>
-                  <h5 className="mx-2">UK</h5>
+                  <h5 className="mx-2">South Korea</h5>
                 </div></Link>
                 <Link to="/university"> <div className="d-flex align-items-center">
                   <i className="fa-solid fa-flag"></i>
-                  <h5 className="mx-2">Malaysia</h5>
+                  <h5 className="mx-2">Malta</h5>
                 </div></Link>
                 <Link to="/university"><div className="d-flex align-items-center">
                   <i className="fa-solid fa-flag"></i>
-                  <h5 className="mx-2">Canada</h5>
+                  <h5 className="mx-2">Hungary</h5>
                 </div></Link>
               </div>
               <div className="col-md-4 col-4">
                 <Link to="/university"> <div className="d-flex align-items-center">
                   <i className="fa-solid fa-flag"></i>
-                  <h5 className="mx-2">Austrailia</h5>
+                  <h5 className="mx-2">Lithuania</h5>
                 </div></Link>
                 <Link to="/university"><div className="d-flex align-items-center">
                   <i className="fa-solid fa-flag"></i>
-                  <h5 className="mx-2">France</h5>
+                  <h5 className="mx-2">European Cyprus</h5>
                 </div></Link>
                 <Link to="/university"><div className="d-flex align-items-center">
                   <i className="fa-solid fa-flag"></i>
-                  <h5 className="mx-2">Italy</h5>
+                  <h5 className="mx-2">China</h5>
                 </div></Link>
               </div>
               <div className="col-md-4 col-4">
                 <Link to="/university"><div className="d-flex align-items-center">
                   <i className="fa-solid fa-flag"></i>
-                  <h5 className="mx-2">New Zealand</h5>
+                  <h5 className="mx-2">Azerbaijan</h5>
                 </div></Link>
                 <Link to="/university"><div className="d-flex align-items-center">
                   <i className="fa-solid fa-flag"></i>
-                  <h5 className="mx-2">Finland</h5>
+                  <h5 className="mx-2">Iran</h5>
                 </div></Link>
               </div>
             </div>
@@ -716,32 +718,31 @@ export default function Home() {
                 <div className="col-md-6 col-6">
                   <div className="d-flex align-items-center">
                     <i className="fa-solid fa-flag flag1"></i>
-                    <h5 className="mx-2 text-white">UK</h5>
+                    <h5 className="mx-2 text-white">Bahrain</h5>
                   </div>
                   <div className="d-flex align-items-center">
                     <i className="fa-solid fa-flag flag1"></i>
-                    <h5 className="mx-2 text-white">USA</h5>
+                    <h5 className="mx-2 text-white">Kuwait</h5>
                   </div>
                   <div className="d-flex align-items-center">
                     <i className="fa-solid fa-flag flag1"></i>
-                    <h5 className="mx-2 text-white">Canada</h5>
+                    <h5 className="mx-2 text-white">Oman</h5>
                   </div>
                 </div>
                 <div className="col-md-6 col-6">
                   <div className="d-flex align-items-center">
                     <i className="fa-solid fa-flag flag1"></i>
-                    <h5 className="mx-2 text-white">Austrailia</h5>
+                    <h5 className="mx-2 text-white">Qatar</h5>
                   </div>
                   <div className="d-flex align-items-center">
                     <i className="fa-solid fa-flag flag1"></i>
-                    <h5 className="mx-2 text-white">Schengen</h5>
+                    <h5 className="mx-2 text-white">Saudi Arabia</h5>
                   </div>
                   <div className="d-flex align-items-center">
                     <i className="fa-solid fa-flag flag1"></i>
-                    <h5 className="mx-2 text-white">Turkey</h5>
+                    <h5 className="mx-2 text-white">United Arab Emirates</h5>
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
@@ -755,59 +756,8 @@ export default function Home() {
       </div>
       {/* <!-- Quote End --> */}
 
-      {/* <!-- Team Start --> */}
-      <div className="container-fluid py-6 px-5">
-        <div className="text-center mx-auto mb-5" style={{ maxWidth: "600px" }}>
-          <h1 className="display-5 mb-0">
-            Our <span style={{ color: "#6E8644" }}>Team</span> Members
-          </h1>
-          <hr className="w-25 mx-auto bg-success" />
-        </div>
-        <div
-          ref={refRight1}
-          className={`row g-5 animate__animated ${isVisibleRight1 ? "animate__fadeInUp" : ""
-            }  animate-on-scroll`}
-        >
-          <div className="col-md-4">
-            <div className="team-item position-relative overflow-hidden">
-              <img className="img-fluid w-100" src={FarhanImg} loading="lazy" alt="" />
-              <div
-                className="team-text w-100 position-absolute top-50 text-center p-4"
-                style={{ backgroundColor: "#6E8644" }}
-              >
-                <h3 className="text-white">Farhan Babar Warraich</h3>
-                <p className="text-white mb-0">Managing Director</p>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-4">
-            <div className="team-item position-relative overflow-hidden">
-              <img className="img-fluid w-100" src={BilalImg} loading="lazy" alt="" />
-              <div
-                className="team-text w-100 position-absolute top-50 text-center p-4"
-                style={{ backgroundColor: "#6E8644" }}
-              >
-                <h3 className="text-white">Bilal Warraich</h3>
-                <p className="text-white text-uppercase mb-0">CEO</p>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-4">
-            <div className="team-item position-relative overflow-hidden">
-              <img className="img-fluid" src={WaseemImg} loading="lazy" alt="" />
-              <div
-                className="team-text w-100 position-absolute top-50 text-center p-4"
-                style={{ backgroundColor: "#6E8644" }}
-              >
-                <h3 className="text-white">Waseem Munir</h3>
-                <p className="text-white mb-0">Manager</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Team />
       {/* <!-- Team End --> */}
-
       {/* <!-- Testimonial Start --> */}
       <div>
         <h1 className="display-5 mb-5 text-center">
@@ -898,12 +848,13 @@ export default function Home() {
 
       {/* <!-- Back to Top --> */}
       <div
-        className="btn btn-lg btn-lg-square rounded-circle back-to-top"
+        className="btn d-flex justify-content-center btn-lg btn-lg-square rounded-circle back-to-top"
         style={{ backgroundColor: "#6E8644" }}
         onClick={MoveToTop}
       >
         <i className="bi bi-arrow-up text-white"></i>
       </div>
+      <AdPopUp />
     </div>
   );
 }
